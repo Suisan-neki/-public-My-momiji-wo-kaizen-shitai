@@ -1,12 +1,13 @@
-language: ja
+# CodeRabbit設定ファイル
+language: "ja"
 
-# レビュー指示
+# レビュー設定
 reviews:
   profile: "chill"
   high_level_summary: true
   poem: false
   
-  # カスタムレビュープロンプト
+  # カスタムレビュープロンプト（日本語で記述）
   tone_instructions: |
     # 🐰 CodeRabbit プロンプト（日本語・セキュリティ重視）
     
