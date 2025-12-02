@@ -4,6 +4,7 @@ reviews:
   profile: chill
   high_level_summary: true
   poem: false
+  review_status: false
   
   # カスタムレビュープロンプト（日本語で記述）
   tone_instructions: |
@@ -90,6 +91,13 @@ reviews:
     - "*.html"
     - "*.css"
     - "*.js"
+    - "*.yaml"
+    - "*.yml"
+    - "*.jpg"
+    - "*.png"
+    - "*.jpeg"
+    - "*.gif"
+    - "*.svg"
     - "!node_modules/**"
     - "!*.min.js"
     - "!*.min.css"
@@ -126,3 +134,18 @@ reviews:
         - パフォーマンス（不要な処理の削除）
         - コードの重複
         - 保守性（関数の分割、コメントの品質）
+    
+    - path: "*.{jpg,png,jpeg,gif,svg}"
+      instructions: |
+        以下の観点でレビューしてください：
+        - ファイルサイズの最適化（必要に応じて圧縮）
+        - 画像形式の適切性（WebP形式への変換検討）
+        - ファイル名の適切性（日本語ファイル名の扱い）
+        - アクセシビリティ（alt属性の設定確認）
+    
+    - path: "*.{yaml,yml}"
+      instructions: |
+        以下の観点でレビューしてください：
+        - YAML構文の正確性
+        - 設定の適切性
+        - セキュリティ（機密情報の含まれていないこと）
