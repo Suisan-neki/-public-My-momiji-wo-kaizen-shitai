@@ -285,8 +285,8 @@
 					<input type="hidden" name="IncludeBlogs" value="29">
 					<input type="hidden" name="IncludeBlogs" value="32">
 					<input type="hidden" name="limit" value="10">
-					<input name="search" type="text" id="searchField">
-					<input name="submit" type="image" src="./assets/images/search.gif" alt="検索" id="searchButton">
+					<input name="search" type="text" id="searchField" aria-label="検索キーワード">
+					<input name="submit" type="image" src="./assets/images/search.gif" alt="検索" id="searchButton" aria-label="検索実行">
 				</form>
             
 				<ul class="subMenu">
@@ -303,8 +303,8 @@
 	<hr>
 
 	<!-- navigation -->
-	<nav id="navigation">
-		<ul id="nav">
+	<nav id="navigation" role="navigation" aria-label="メインナビゲーション">
+		<ul id="nav" role="menubar">
 			<li class="home">
 				<a href="https://momiji.hiroshima-u.ac.jp/momiji-top/">HOME</a>
 			</li>
@@ -646,8 +646,8 @@
 
 
 	<!-- content -->
-	<div id="content">
-		<div id="eventNewsBox">
+	<main id="content" role="main">
+		<section id="eventNewsBox" aria-labelledby="eventNewsTitle">
             <h3><img src="./assets/images/eventnews_title.jpg" alt="イベント＆ニュース" width="672" height="41"></h3>
             <dl>
                   <dt>2025/12/1</dt> 
