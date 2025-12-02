@@ -13,19 +13,19 @@ reviews:
       - セキュリティの問題
       - コードの重複
       - 保守性の問題
-  
-  # 具体的なチェック項目
-  focus_areas:
-    - HTML5への移行状況
-    - セマンティックHTML要素の使用（header, nav, main, section, article, footer）
-    - インラインスタイルの有無
-    - ARIA属性の適切な使用
-    - キーボードナビゲーション
-    - 画像の最適化（lazy loading、WebP形式）
-    - CSS構造の改善（@importの削除、CSS変数の使用）
-    - レスポンシブデザイン
-    - コードの重複
-    - コメントの品質
+
+# 具体的なチェック項目
+focus_areas:
+  - HTML5への移行状況
+  - セマンティックHTML要素の使用（header, nav, main, section, article, footer）
+  - インラインスタイルの有無
+  - ARIA属性の適切な使用
+  - キーボードナビゲーション
+  - 画像の最適化（lazy loading、WebP形式）
+  - CSS構造の改善（@importの削除、CSS変数の使用）
+  - レスポンシブデザイン
+  - コードの重複
+  - コメントの品質
 
 # レビュー対象ファイル
 paths:
