@@ -15,8 +15,8 @@ $(document).ready(function() {
 		$('#nav').droppy();
 	}
 
-	$('.toTop a').attr('href', 'javascript:void(0);');
-	$('.toTop a').click(function() {
+	$('.toTop a').on('click', function(e) {
+		e.preventDefault();
 		slidePage(0);
 	});
 

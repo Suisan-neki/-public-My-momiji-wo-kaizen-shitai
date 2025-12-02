@@ -1,0 +1,66 @@
+/* モダンなCSS改善 */
+
+/* インラインスタイルの置き換え */
+#header-login-maintenance {
+  padding-top: 0.5em;
+  font-size: 15px;
+}
+
+#loginBoxComment {
+  padding-top: 0.5em;
+  font-size: 12px;
+}
+
+.urgent-notice-link {
+  color: #EF454A;
+}
+
+/* レスポンシブ対応の改善 */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* アクセシビリティ改善 */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000;
+  color: #fff;
+  padding: 8px;
+  text-decoration: none;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* フォーカス表示の改善 */
+a:focus,
+button:focus,
+input:focus {
+  outline: 2px solid #0066cc;
+  outline-offset: 2px;
+}
+
+/* セマンティック要素のスタイル */
+header,
+nav,
+main,
+footer {
+  display: block;
+}
+
+/* モバイルファーストのメディアクエリ */
+@media (max-width: 768px) {
+  #header-login-maintenance {
+    font-size: 14px;
+  }
+  
+  #loginBoxComment {
+    font-size: 11px;
+  }
+}
+
