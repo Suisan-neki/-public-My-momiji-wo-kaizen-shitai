@@ -1,15 +1,15 @@
-# CodeRabbit設定ファイル
-language: "ja"
+language: ja-JP
 
-# レビュー設定
 reviews:
-  profile: "chill"
+  profile: chill
   high_level_summary: true
   poem: false
   
   # カスタムレビュープロンプト（日本語で記述）
   tone_instructions: |
     # 🐰 CodeRabbit プロンプト（日本語・セキュリティ重視）
+    
+    **重要：すべてのレビューコメントは日本語で記述してください。**
     
     **あなたはペアプロ指導者としての高度なコードレビュアーです。**
     
@@ -84,15 +84,45 @@ reviews:
     * レビュー対象者が初心者であっても、**専門用語は丁寧に説明し、学びを促す**
     * 「なぜそれが危ないか」**因果関係を示す**
     * 最後に一言、「質問があれば気軽に聞いてね！」と添える
-
-# レビュー対象ファイル
-paths:
-  - "*.html"
-  - "*.css"
-  - "*.js"
-
-# 無視するファイル/パス
-ignore:
-  - "node_modules/**"
-  - "*.min.js"
-  - "*.min.css"
+  
+  # ファイルパスフィルター（レビュー対象ファイルと無視するファイル）
+  path_filters:
+    - "*.html"
+    - "*.css"
+    - "*.js"
+    - "!node_modules/**"
+    - "!*.min.js"
+    - "!*.min.css"
+  
+  # パスごとのレビュー指示
+  path_instructions:
+    - path: "*.html"
+      instructions: |
+        以下の観点でレビューしてください：
+        - HTML5への移行状況
+        - セマンティックHTML要素の使用（header, nav, main, section, article, footer）
+        - インラインスタイルの有無
+        - ARIA属性の適切な使用
+        - キーボードナビゲーション
+        - XSS対策（innerHTMLの使用、ユーザー入力のサニタイズ）
+        - レスポンシブデザイン
+        - 画像の最適化（lazy loading、WebP形式）
+    
+    - path: "*.css"
+      instructions: |
+        以下の観点でレビューしてください：
+        - CSS構造の改善（@importの削除、CSS変数の使用）
+        - レスポンシブデザイン
+        - パフォーマンス（不要なスタイルの削除）
+        - 保守性（クラス命名規則、BEMなどの使用）
+        - コードの重複
+    
+    - path: "*.js"
+      instructions: |
+        以下の観点でレビューしてください：
+        - セキュリティ（XSS、CSRF対策）
+        - 入力値検証（バリデーション）
+        - エラーハンドリング
+        - パフォーマンス（不要な処理の削除）
+        - コードの重複
+        - 保守性（関数の分割、コメントの品質）
