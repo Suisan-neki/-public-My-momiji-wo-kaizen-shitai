@@ -1,2 +1,40 @@
 language: ja-JP
 
+# レビュー指示
+reviews:
+  # コード品質チェック
+  - type: code-quality
+    checks:
+      - レガシーコードの改善点
+      - セマンティックHTMLの使用
+      - インラインスタイルの削除
+      - アクセシビリティの問題
+      - パフォーマンスの問題
+      - セキュリティの問題
+      - コードの重複
+      - 保守性の問題
+  
+  # 具体的なチェック項目
+  focus_areas:
+    - HTML5への移行状況
+    - セマンティックHTML要素の使用（header, nav, main, section, article, footer）
+    - インラインスタイルの有無
+    - ARIA属性の適切な使用
+    - キーボードナビゲーション
+    - 画像の最適化（lazy loading、WebP形式）
+    - CSS構造の改善（@importの削除、CSS変数の使用）
+    - レスポンシブデザイン
+    - コードの重複
+    - コメントの品質
+
+# レビュー対象ファイル
+paths:
+  - "*.html"
+  - "*.css"
+  - "*.js"
+
+# 無視するファイル/パス
+ignore:
+  - "node_modules/**"
+  - "*.min.js"
+  - "*.min.css"
